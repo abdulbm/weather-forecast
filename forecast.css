@@ -1,0 +1,114 @@
+ body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: floralwhite;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('background2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #00c3ff;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+
+.forecast-card {
+    background: linear-gradient(180deg, gray, skyblue);
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.forecast-date {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 8px;
+}
+
+
+.forecast-temp {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.forecast-info {
+    font-size: 1rem;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    .forecast-card {
+        width: 160px;
+        padding: 15px;
+    }
+    .forecast-temp {
+        font-size: 1.5rem;
+    }
+}
+.cityinput{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+button[type="submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: skyblue;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover{
+    background-color: gray;
+}
+.weatherform{
+    margin: 20px;
+}
