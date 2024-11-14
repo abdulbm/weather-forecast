@@ -47,9 +47,9 @@ function displayWeatherInfo(data){
             });
 
             
-            nextTwoDaysForecast.forEach(({ dt_txt: date, main: { temp, humidity }, weather }) => {
+            nextTwoDaysForecast.forEach(({ dt_txt: date, main: { temp, humidity }, wind:{ speed }, weather }) => {
                 
-                const forecastData=[{ date: `${date}`, temp: `${temp}`, humidity: `${humidity}`, description: `${weather[0].description}`}];
+                const forecastData=[{ date: `${date}`, temp: `${temp}`, humidity: `${humidity}`, wind:`${speed}`, description: `${weather[0].description}`, id:`${weather[0].id}`}];
                 function createForecastCard({ date, temp, humidity, description }) {
                     const card = document.createElement('div');
                     card.className = 'forecast-card';
@@ -60,6 +60,7 @@ function displayWeatherInfo(data){
                         <div class="forecast-date">${new Date(date).toLocaleString()}</div>
                         <div class="forecast-temp">${(temp-273.15).toFixed(1)}°C</div>
                         <div class="forecast-info">Humidity: ${humidity}%</div>
+                        <div class="forecast-info">Wind Speed: ${(speed * 3.6).toFixed(1)} Km/h</div>
                         <div class="forecast-info">${description}</div>
                     `;
                     return card;
